@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "manager": "^1.0.9",
+    "time-events": "^1.0.1"
+  }
+}

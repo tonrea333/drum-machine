@@ -70,3 +70,9 @@ body {
     transform-origin: bottom center;
     animation: tick 1200ms ease-in-out infinite;
 }
+.BeatCounter {
+    height: 40px;
+    width: 55px;
+    border-color:#e07a5f
+    
+}
