@@ -27,7 +27,11 @@ function update() {
     //Play the "tock" sound
     if (counter % 4) {
         tock.play()
+        
         console.log(counter)
+
+        const metroncount = document.querySelector(".BeatCounter");
+metroncount.innerText = counter;
     }
 }
 // This function sets up update() to be called every 600ms
