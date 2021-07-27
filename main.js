@@ -1,50 +1,64 @@
 //Const referral
 const bcounter = document.querySelector(".BeatCounter")
-
+const metroSound = document.querySelector("#metronome")
 
 
 // Setup 'tick' sound
 const tick = new Audio('sounds/tick.mp3');
+//Setup 'tock' sound
+const tock = new Audio("sounds/tock.mp3")
+
+
+//Metronome event listner
+
+
+
+let counter = 0;
+
+
+
 
 // This function is called every 600ms
 function update() {
-
+    counter = counter + 1;
     // Play the 'tick' sound
     tick.play();
-   // console.log(play.value)
-}
 
+    //Play the "tock" sound
+    if (counter % 4) {
+        tock.play()
+        console.log(counter)
+    }
+}
 // This function sets up update() to be called every 600ms
 function setupUpdate() {
     setInterval(update, 600)
     console.log(update)
     console.log(setInterval)
-   // while (600) {
-        let counter = 0;
-        
-        const countUp = setInterval(function () {
-            if (counter > 4) {
-                clearInterval(countUp);
-                counter = counter + 1;
-            }bcounter.value = 0 + counter;
-            bcounter.createElement("Counter" + counter)
-            console.log(counter)
-            ;
+    // while (600) {
+    let counter = 0;
 
-        }, 1000)
+    //const countUp = setInterval(function () {
+    //if (counter > 4) {
+    // clearInterval(countUp);
+    // counter = counter + 1;
+    //} bcounter.value = 0 + counter;
+    // bcounter.createElement("Counter" + counter)
+    // console.log(counter)
+
+
+    //}, 1000)
     //}
 }
 
 // Call setupUpdate() once after 300ms
 setTimeout(setupUpdate, 300);
 
-//Setup 'tock' sound
-const tock = new Audio("sounds/tock.mp3")
+
 
 //This function is called every 2400ms
 function update2() {
-    //Play the "tock" sound
-    tock.play()
+
 }
 
 //This function sets up update() to be calle every 2400ms
