@@ -1,6 +1,6 @@
 //Const referral
-const bcounter = document.querySelector(".BeatCounter")
-const metroSound = document.querySelector("#metronome")
+
+
 
 
 // Setup 'tick' sound
@@ -20,18 +20,31 @@ let counter = 0;
 
 // This function is called every 600ms
 function update() {
-    counter = counter + 1;
-    // Play the 'tick' sound
-    tick.play();
+    const metroSound = document.querySelectorAll("input[type=checkbox]")
 
-    //Play the "tock" sound
-    if (counter % 4) {
-        tock.play()
-        
-        console.log(counter)
+    for (let i = 0; i < metroSound.length; i++) {
+        const metroChk = metroSound[i];
+        if (metroChk.checked) {
 
-        const metroncount = document.querySelector(".BeatCounter");
-metroncount.innerText = counter;
+
+            console.log(metroChk)
+
+
+
+            counter = counter + 1;
+            // Play the 'tick' sound
+            tick.play();
+
+            //Play the "tock" sound
+            if (counter % 4) {
+                tock.play()
+
+                console.log(counter)
+
+                const metroncount = document.querySelector(".BeatCounter");
+                metroncount.innerText = counter;
+            }
+        }
     }
 }
 // This function sets up update() to be called every 600ms
@@ -61,14 +74,14 @@ setTimeout(setupUpdate, 300);
 
 
 //This function is called every 2400ms
-function update2() {
+////function update2() {
 
-}
+
 
 //This function sets up update() to be calle every 2400ms
-function setuptockUpdate() {
-    setInterval(update2, 2400);
-}
+//function setuptockUpdate() {
+  //  setInterval(update2, 2400);
+//}
 
 //call setuptockupdate() once after 1200ms
-setTimeout(setuptockUpdate, 1200)
+//setTimeout(setuptockUpdate, 1200)
