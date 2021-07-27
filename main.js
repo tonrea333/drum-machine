@@ -31,14 +31,15 @@ function update() {
     const hiSound = document.querySelectorAll('input[name="dddd"]:checked');
     for (let i = 0; i < metroSound.length; i++) {
         const metroChk = metroSound[i];
-        if (metroChk) {
+        if (metroChk.checked) {
             console.log(metroChk)
             counter = counter + 1;
-            // Play the 'tick' sound
-            tick.play();
-            //Play the "tock" sound
+            // Play the 'tock' sound
+            tock.play();
+            //Play the "tick" sound
             if (counter % 4) {
-                tock.play()
+                tock.pause()
+                tick.play()
 
                 console.log(metroSound[i], "test")
                 console.log(counter)
@@ -46,6 +47,7 @@ function update() {
                 const metroncount = document.querySelector(".BeatCounter");
                 metroncount.innerText = counter;
             }
+           
         }
 
     }

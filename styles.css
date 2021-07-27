@@ -9,7 +9,7 @@ body {
     justify-content: center;
     margin: none;
     flex-direction: column;
-    background-color: #81b29a;
+    background-color: #4460da;
 }
 
 .tip {
@@ -27,27 +27,30 @@ body {
 }
 
 .background-left {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #3dc52b;
     border-left: 100px solid transparent;
 }
 
 .background-center {
     flex: 1;
-    background-color: #f2cc8f;
+    background-color: #1126e0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.background-center:hover {
+    background: green;
+}
 
 .background-right {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #3dc52b;
     border-right: 100px solid transparent;
 }
 
 .core {
     flex: 1;
     width: 30%;
-    background-color: #f4f1de;
+    background-color: #7189cc;
     margin: 24px 0;
     border: 6px dashed #e07a5f;
 }
@@ -61,7 +64,7 @@ body {
 .arm {
     height: 300px;
     width: 20px;
-    background-color: #3d405b;
+    background-color: #ee0606;
     position: absolute;
     bottom: 5px;
     border-bottom-left-radius: 10px;
@@ -72,7 +75,8 @@ body {
 }
 .BeatCounter {
     height: 40px;
-    width: 55px;
-    border-color:#e07a5f
+    width: 75px;
+    border: 6px solid#74574f;
+    text-align: center;
     
 }
