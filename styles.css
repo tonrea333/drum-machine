@@ -9,7 +9,7 @@ body {
     justify-content: center;
     margin: none;
     flex-direction: column;
-    background-color: #4460da;
+    background-color: #798a74;
 }
 
 .tip {
@@ -27,13 +27,13 @@ body {
 }
 
 .background-left {
-    border-bottom: 400px solid #3dc52b;
+    border-bottom: 400px solid #334230;
     border-left: 100px solid transparent;
 }
 
 .background-center {
     flex: 1;
-    background-color: #1126e0;
+    background-color: #515153;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ body {
 }
 
 .background-right {
-    border-bottom: 400px solid #3dc52b;
+    border-bottom: 400px solid #334230;
     border-right: 100px solid transparent;
 }
 
@@ -52,7 +52,7 @@ body {
     width: 30%;
     background-color: #7189cc;
     margin: 24px 0;
-    border: 6px dashed #e07a5f;
+    border: 6px dashed #c4aca5;
 }
 
 @keyframes tick {
@@ -71,12 +71,14 @@ body {
     border-bottom-right-radius: 10px;
     left: 165px;
     transform-origin: bottom center;
-    animation: tick 1200ms ease-in-out infinite;
+    animation: tick 1200ms ease-in-out infinite ;
+
 }
 .BeatCounter {
     height: 40px;
     width: 75px;
     border: 6px solid#74574f;
     text-align: center;
-    
+    border-radius: 20px;
 }
+

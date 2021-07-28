@@ -1,8 +1,3 @@
-//Const referral
-
-
-
-
 // Setup 'tick' sound
 const tick = new Audio('sounds/tick.mp3');
 //Setup 'tock' sound
@@ -15,13 +10,7 @@ const snareDrum = new Audio("sounds/snare-drum.mp3");
 const hiDrum = new Audio("sounds/hi-hat.mp3");
 
 //Metronome event listner
-
-
-
 let counter = 0;
-
-
-
 
 // This function is called every 600ms
 function update() {
@@ -43,13 +32,11 @@ function update() {
 
                 console.log(metroSound[i], "test")
                 console.log(counter)
-
+                //Beat counter
                 const metroncount = document.querySelector(".BeatCounter");
                 metroncount.innerText = counter;
             }
-           
         }
-
     }
     //loop for kick sound
     for (let i = 0; i < kickSound.length; i++) {
@@ -58,7 +45,7 @@ function update() {
             kickDrum.play();
         }
     }
-//loop for snare sound
+    //loop for snare sound
     for (let i = 0; i < snareSound.length; i++) {
         const snareChk = snareSound[i];
         if (snareChk.checked) {
@@ -72,11 +59,6 @@ function update() {
             hiDrum.play();
         }
     }
-
-
-
-
-
 }
 // This function sets up update() to be called every 600ms
 function setupUpdate() {
@@ -85,34 +67,9 @@ function setupUpdate() {
     console.log(setInterval)
     // while (600) {
     let counter = 0;
-
-    //const countUp = setInterval(function () {
-    //if (counter > 4) {
-    // clearInterval(countUp);
-    // counter = counter + 1;
-    //} bcounter.value = 0 + counter;
-    // bcounter.createElement("Counter" + counter)
-    // console.log(counter)
-
-
-    //}, 1000)
-    //}
 }
-
 // Call setupUpdate() once after 300ms
 setTimeout(setupUpdate, 300);
 
 
 
-//This function is called every 2400ms
-////function update2() {
-
-
-
-//This function sets up update() to be calle every 2400ms
-//function setuptockUpdate() {
-  //  setInterval(update2, 2400);
-//}
-
-//call setuptockupdate() once after 1200ms
-//setTimeout(setuptockUpdate, 1200)
